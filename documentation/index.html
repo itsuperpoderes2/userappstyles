@@ -1,0 +1,368 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title></title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		pre,code { font-family:"Consolas", Courier New, Courier, monospace; padding:15px; background:#f7f7f7; margin:0px 0px 18px; border:1px solid #e5e5e5; line-height:18px; color:#000 }
+code { padding:0px 3px; background-image:none; background:#f5f5f5; border:none }
+pre { white-space:pre-wrap; white-space:-moz-pre-wrap; white-space:-pre-wrap; white-space:-o-pre-wrap; word-wrap:break-word }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	  <h3 class="center alt"> Documentation by &ldquo;Ansonika&rdquo; v1.2</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;FOOYES - HTML Site template&rdquo;</h1>
+		
+		<div class="borderTop">
+		  <div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 5 NOV 2020<br>
+                    Last udpate: 16 November 2020<br>
+					By: Ansonika</strong>
+			  </p>
+	    </div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you are happy with the theme, please <strong>TAKE A MOMENT TO RATE IT</strong> from your DOWNLOADS PAGE.
+Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files, Structure and basic modifications</a></li>
+<li><a href="#php">PHP contact form, newsltetter form and submit restaurant</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#credits">Sources and Credit</a></li>
+             <li><a href="#updates">UPDATES</a></li>
+		</ol>
+   
+
+      <hr>
+        
+  <h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+	  <p>  It's based on Boostrap 4 framework grid. It's ULTRA RESPONSIVE!!. 
+	  The item comes with SASS files for the primary styles.</p>
+<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files Structure and basic modfication</strong> - <a href="#toc">top</a>	  </h3>
+	  <p>The css files are inside the css folder (not minified and minified versions included) .To modify colors, typografy, button style ecc....find the realtive comment line in style.css. 
+      <strong>We reccomend to apply every changes in css/custom.css in order to makes future updates easly to apply.</strong>
+      Below how the main style file is organized:</p>
+<p>0. ICONS</p>
+<p>1. SITE STRUCTURE and TYPOGRAPHY<br>
+  - 1.1 Typography<br>
+  - 1.2 Structure<br>
+  - 1.3 Main Menu<br>
+  - 1.4 Heros/Above the fold<br>
+  - 1.5 Drop down cart<br>
+  - 1.6 Drop down user logged</p>
+<p>2. CONTENT<br>
+  - 2.1 Home<br>
+  - 2.2 Carousel<br>
+  - 2.3 Strip item</p>
+<p>3. COMMON<br>
+  - 3.1 Misc<br>
+  - 3.2 spacing<br>
+  - 3.3 Buttons<br>
+  - 3.4 Footer<br>
+  - 3.5 Misc 2 + Forms<br>
+  - 3.6 Magnific Popup CSS<br>
+  - 3.7 Sing In Modal<br>
+  - 3.8 Modal Dialog<br>
+  - 3.9 Cookie bar</p>
+<pre>
+<p><strong>Note
+</strong>1) To increase the Page Speed the we create a customized version of the Bootsrap Libray removing the not used style and inclued as default. <br>You can enable styles by uncomment in bootstrap_customized.css the styles needed in your project, then reminify the file.
+
+2) To increase the Page Speed we inclued the main site css style and "above the fold" in css/style.css;  for specific styles related and present only on specific pages, 
+we include<strong> </strong>create dedicated css files.<strong><br></strong>
+Example for listing.html (and listing variation pages):
+&lt;!-- SPECIFIC CSS --&gt;<br>&lt;link href=&quot;css/listing.css&quot; rel=&quot;stylesheet&quot;&gt;</p><p>The item comes with SASS  files.
+
+3) Same logic for the some js files; js/common_func.js contain the scripts common for all pages of the template. Specific pages, have dedicate 
+js files.
+
+Example for listing.html (and listing variation pages):
+&lt;!-- SPECIFIC SCRIPTS --&gt;<br>&lt;script src=&quot;js/sticky_sidebar.min.js&quot;&gt;&lt;/script&gt;<br>&lt;script src=&quot;js/specific_listing.js&quot;&gt;&lt;/script&gt;</p></pre>
+<p><strong>Change the logo<br>
+</strong>To change the logo, simply use your PNG24 file (suggested logo height is 35/40px) or better use an svg version. Below how is coded</p>
+<pre>&lt;div id=&quot;logo&quot;&gt;<br>  &lt;a href=&quot;index.html&quot;&gt;<br>  &lt;img src=&quot;img/logo_sticky.svg&quot; width=&quot;162&quot; height=&quot;35&quot; alt=&quot;&quot;&gt;<br>&lt;/a&gt;<br>&lt;/div&gt;</pre>
+
+
+<strong>GOOGLE MAP API</strong> (if the Google map works locally but does not works once the site will be online)<br>
+  <pre>Google requires an api key for the Google map. They require a credit card for a new api..don’t worry 
+there cost is very very low quantity of views or free for a 
+particular limit <a href="https://cloud.google.com/maps-platform/pricing/sheet/" rel="nofollow">https://cloud.google.com/maps-platform/pricing/sheet/</a>
+<br>You can create your own "Standard api key" here <br>by clicking on &quot;GET KEY&quot; BUTTON (on Authentication for the standard API—API keys section), <br>and follow the steps.
+<a href="https://developers.google.com/maps/documentation/javascript/get-api-key#key" target="_blank">https://developers.google.com/maps/documentation/javascript/get-api-key#key</a>
+
+Here some additional info on how to create an API KEY <a href="http://thegrue.org/google-map-javascript-api-key/">http://thegrue.org/google-map-javascript-api-key/</a><br><br>Then replace at the bottom of every page that use Google map, this line<br>
+&lt;script src=&quot;http://maps.googleapis.com/maps/api/js&quot;&gt;&lt;/script&gt; OR 
+&lt;script type="text/javascript" src="<a target="_blank" href="http://maps.googleapis.com/maps/api/js?sensor=false">http://maps.googleapis.com/maps/api/js?sensor=false</a>"&gt;&lt;/script&gt;<br><br>with your api key included, like the example below<br>&lt;script src="<a target="_blank" href="http://maps.googleapis.com/maps/api/js?key=AIzaSyAaO0WhIut5GCNr9y8xTA36EPj87NEHptM">http://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY</a>"&gt;&lt;/script&gt;<br><br>
+NOTE: if you apply an api key, the map locally does not load. You must upload your site.</pre><br>
+  
+<p><strong>Home with video header (fallback with a background image in tablets and mobile: these devices does not support video autoplay as background due to reduce bandwith consume)</strong><br>
+ </p>
+<pre>1)Save you mp4 and ogv video in the video folder.The name of the files must match the datasource tag:<br>
+Example<br>data-teaser-source=&quot;video/intro&quot; (folder/name_files)=<br>intro.mp4<br>intro.ogv
+
+You can change also the opacity in style.css <br><br>video {<br>	position: absolute;<br>	top: 0;<br>	bottom: 0;<br>	left: 0;<br>	right: 0;<br>	opacity: 0.6;<br>}<br><br>2) To change the fallback background image for mobiles and tablets open css/style.css and 
+find this class (video on background is disable on tablet and mobiles due to bandwith consume limit):<br><br>@media (max-width: 1024px):<br>#hero_video{
+background: #ccc url(../img/home_section_1.jpg);
+background-size:cover;
+background-position: center bottom;}<br></pre>
+
+<br>
+<p><strong>How Lazy Load Works</strong><br>
+<pre>1) Owl Carosuel Lazy Load
+
+&lt;img src="<a target="_blank" href="img/lazy-placeholder.png" rel="noreferrer noopener">img/lazy-placeholder.png</a>" data-src="img/item.jpg" <strong>class="owl-lazy"</strong> alt=""&gt;
+
+2) Lazy load images
+
+&lt;img src="<a target="_blank" href="img/location_list_placeholder.png" rel="noreferrer noopener">img/location_list_placeholder.png</a>" data-src="img/item.jpg" alt="" <strong>class="lazy"</strong>&gt;
+
+or use for the src attribute a 1px gif transparent
+
+&lt;img src="<a target="_blank" href="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" rel="noreferrer noopener">data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==</a>" 
+data-src="img/cards_all.svg" alt="" width="198" height="30" <strong>class="lazy"</strong>&gt;
+
+You can delete the &quot;src&quot; attribute and leave only &quot;data-src&quot;, the page gain in performance with less<br>request to the server but the code result not W3C validated due the &quot;src&quot; attribute result missing.</pre>
+<br>
+<p><strong>Control the opacity of the header images in the inner pages</strong><br>
+<pre>You can control the opacity of the header images via data attribute as the example below:	
+	
+.&lt;div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.5)"&gt;</pre><br>
+
+<p><strong>Change the bakcground image in the inner pages<br>
+</strong></p>
+<pre><strong></strong>
+You can control the background image of the headers via data attribute as the example below:	
+
+&lt;div class="hero_single inner_pages background-image" data-background="url(img/hero_general.jpg)"&gt;</pre><br>
+
+<p><strong>Address Autocomplete with Google API<br>
+</strong></p>
+<pre><strong></strong>
+IMPORTANT! It requires an API key (see the section Google Map API); locally the autocomplete does not works,
+you should apply the api key on the footer page script then upload the site to see it working. 
+
+&lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;libraries=places&amp;callback=initMap&quot;&gt;&lt;/script&gt;</pre>
+<br>
+
+<p><strong>Set up  site launch page located in site_launch folder</strong><br>
+  Open functions.js and find this line of code:</p>
+<pre><strong>SET THE DATE</strong><br>Open site_launch/js/functions.js and find this line.<br><br>var target = new Date(&quot;July 15 2014 13:30:00 GMT+0100&quot;); //replace with YOUR DATE
+
+<strong>SET NEWSLETTER EMAIL</strong><br>Open site_launch/assets/newsletter.php and find this commented code.<br><br>//$address = &quot;your email address&quot;;<br>$address = &quot;test@domain.com&quot;;<br></pre><br>
+
+<p><strong>How GOOGLE MAPS works</strong></p>
+<pre>Let's take as example the map used in grid-listing-filterscol-map.html. Open js/main_map_scripts.js.
+
+'Marker': [<br>			{<br>type_point: 'Italian Food',<br>name: 'Restaurant Name',<br>location_latitude: 48.865633, <br>location_longitude: 2.321236,<br>map_image_url: 'img/thumb_map_single_restaurant.jpg',<br>rate: 'Superb | 7.5',<br>name_point: 'Restaurant Name',<br>get_directions_start_address: '',<br>phone: '+3934245255',<br>url_point: 'detail-restaurant.html'<br>},
+
+type_point = restaurant category
+name = restaurant name
+location_latitude= the latitude of Arc de Triomphe<br>location_longitude= the longitude of Arc de Triomphe
+map_image_url: the thumbnail inside the infobox
+rate= rate<br>name_point= the title in info box<br>get_directions_start_address= get directions start address (leave empty or specify the start address)<br>phone: phone number
+url_point= the link in the button
+
+The marker/pins are located in img/pins folder.<br>
+</pre>
+
+<p><strong>Leaflet OpenStreet Map + MapBox<br>
+</strong></p>
+<pre>
+The item comes with another Interactive Map Solution. It a bit different from the Google Map Api.
+Leaflet + OpenStreetMap is totally free; the implementation with Mapox requires registration and an API access token key (free untill 750,000 user views/requests; more info at <a href="https://www.mapbox.com/pricing/">https://www.mapbox.com/pricing/</a>)
+	
+Below we examine how it works, let's take as example tours-half-screen-map-leaflet.html file.
+
+1) leaflet_half_screen_func.js
+
+BELOW HOW TO CENTER THE MAP AND MAIN MAP SETTINGS
+var map = L.map('map', {<br>        <strong>center: [48.865633, 2.321236],</strong><br>        minZoom: 2,<br>        zoom: 13<br>    });
+
+MAPBOX ACCESS TOKEN (<a href="https://www.mapbox.com/">https://www.mapbox.com/</a> and create your access token)
+L.tileLayer( 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {<br>     attribution: '&amp;copy; &lt;a href=&quot;https://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt; &amp;copy; &lt;a href=&quot;https://www.mapbox.com/about/maps/&quot;&gt;Mapbox&lt;/a&gt;<br>     tileSize: 512,<br>     maxZoom: 18,<br>     zoomOffset: -1,<br>     id: 'mapbox/streets-v11', <br>     accessToken: '',// Your Mapbox Access Token<br>     subdomains: ['a','b','c']<br>    }).addTo( map );
+
+
+2) leaflet_markers.js<br>In this file there are all the markers/points data:<br>
+&quot;id&quot;:1, //ID to use in the html page to view the infowindow of the point from the list<br>&quot;type_point&quot;:&quot;Pizza&quot;, //Type Point<br>&quot;location_latitude&quot;:48.865633, //Lat<br>&quot;location_longitude&quot;:2.321236, //Long<br>&quot;map_image_url&quot;:&quot;img/thumb_map_single_restaurant.jpg&quot;, //Thumb <br>&quot;rate&quot;:&quot;Superb | 7.5&quot;, //Rate<br>&quot;name_point&quot;:&quot;Restaurant Name&quot;, //Name Point<br>&quot;get_directions_start_address&quot;:&quot;&quot;, //directions start address (leave empty or specify the start address)<br>&quot;phone&quot;:&quot;+3934245255&quot;, //Phone<br>&quot;url_point&quot;:&quot;restaurant-detail.html&quot; //Specific poin url page
+
+3) How to use Leaflet + OpenStreetMap only<br>Just simply replace this line on footer 
+&lt;script src=&quot;js/leaflet_map/leaflet_half_screen_func.js&quot;&gt;&lt;/script&gt;
+
+into
+&lt;script src=&quot;js/leaflet_map/leaflet_no_mapbox_half_screen_func.js&quot;&gt;&lt;/script&gt;
+
+TOOL TO CREATE COORDINATES: <a href="https://www.latlong.net/convert-address-to-lat-long.html">https://www.latlong.net/convert-address-to-lat-long.html</a></pre>
+      
+<p><strong>THE GRID</strong><br> 
+      Please refer to this <a href="http://getbootstrap.com/">documentation Boostrap</a></p><h4><strong>THE WIZARD on submit rider page</strong></h4><strong>
+    Add one more step to the wizard</strong><br>
+Each step is defined by a div, so simply duplicate one of them. Below an example of the structure:</p>
+  <pre>&lt;div class=&quot;step&quot;&gt;
+	your content....                <br>&lt;/div&gt;&lt;!-- end step--&gt;</pre>
+    
+    <p><strong>Make an input field, select or radio/checkbox required or not.</strong><br>
+Simply add or remove the class "required" to the element. To change the error message go to js/wizard/wizard_script.js and under the section jQuery Validation Plugin at line 1007 aprox.<br>
+<br>
+   Add one more questions with checkbox answer</strong><br>Open the HTML page (let's take an example quotation-wizard-version.html). As you can see the name of the input has to be the same with at the end [], each one have a different value. in the example below we add 2 more checkbox questions: </p>
+  <pre>&lt;h3&gt;Question?&lt;/h3&gt; <br>
+&lt;div class=&quot;form-group&quot;&gt;<br>&lt;label class=&quot;container_check version_2&quot;&gt;Custom interface and layout
+&lt;input type=&quot;checkbox&quot; value=&quot;Custom interface and layout&quot; name=&quot;question_1[]&quot; class=&quot;required&quot; onchange=&quot;getVals(this, 'question_1');&quot;&gt;
+&lt;/label&gt;<br>&lt;/div&gt;<br>
+&lt;div class=&quot;form-group&quot;&gt;<br>&lt;label class=&quot;container_check version_2&quot;&gt;Web site design
+&lt;input type=&quot;checkbox&quot; value=&quot;Web&quot; name=&quot;question_1[]&quot; class=&quot;required&quot; onchange=&quot;getVals(this, 'question_1');&quot;&gt;
+&lt;/label&gt;<br>&lt;/div&gt;
+
+$message .= &quot;\n1) Question?\n&quot; ;<br>foreach($_POST['question_1'] as $value) <br>{ <br>	$message .=   &quot;- &quot; .  trim(stripslashes($value)) . &quot;\n&quot;; <br>};<br></pre>
+
+<p><strong>Antispam protection</strong>:<br>
+Spam bots usually disable javascripts to avoid the jquery validation or automatically fill all the input fields and send the email. Now the php submission script link is removed from the html and placed inside the the js script. So if the js will be disabled, the form will be not processed. The js script check also if the hidden input field (id website) is filled by the spam bot...if filled the form will be not processed.
+<pre>LEAVE THE HIDDEN INPUT FIELD WEBSITE for the reason above<br>&lt;input id=&quot;website&quot; name=&quot;website&quot; type=&quot;text&quot; value=&quot;&quot;&gt;
+</pre>
+
+
+      <hr>
+<br>
+      <h3 id="php"><strong>C) PHP files: Contact form</strong> - <a href="#php">top</a></h3>
+      <p>All the files you need are located in assets folder. If you need to change the allert messages open assets/validate.js. Below an example taken from contact.php; all the files are well commented<strong>.<br>
+      </strong><br>
+        <img src="assets/images/contacts.jpg" alt="" width="759" height="476" style="border:1px solid #ccc;">      </p>
+      </p>
+      <p><strong>Contact form<br>
+        </strong>It's the same logic and script of check newsletter. If you doesn't recieve the email please first check:<br>
+      1) Your spam folder<br>
+      2) If you hosting requires special settings (SMTP Authentication is not supported by the script)<br>
+      3) If your email  has to be managed from the same hosting provider<br>
+      4) Set the permission of the asset folder on your host to 755 your FTP client
+      </p>
+
+
+      <hr>
+<h3 id="javascript"><strong>D) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+	  <p>This theme use these Javascript (minified versions included). I've included the common theme scripts in a single file for a fast edit and load (or if you prefer you can find the same js in separate files in js folder). Each page could have specific js related to the page.</p>
+      <p><strong>common_scripts.js content:
+      </strong>      
+      <ul>
+      <li>jQuery 3.5.0</li>
+      <li>Lazy load images</li>
+      <li>Owl Carousel</li>
+      <li>Nice Select</li>
+      <li>Boostrap.bundle.js</li>
+      <li>MagnificPopup.js</li>
+       <li>jQuery Show hide passoword</li>
+      </ul>
+      </p>
+<hr>
+		
+		<h3 id="credits"><strong>E) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+	  <p>I've used the following images, icons or other files as listed. For the js listed below, you can find the <strong>more documentation</strong> on the relative sites.
+		
+	  <ul>
+        <li><a href="http://twitter.github.io/bootstrap/">Twitter Bootstrap</a></li>
+        <li><a href="http://jquery.com/">Jquery</a></li>
+        <li><a href="http://owlgraphic.com/owlcarousel/">Owl carousel</a></li>
+        <li><a href="https://jqueryui.com/">JQuery UI Datepicker</a></li>
+        <li><a href="https://github.com/WeCodePixels/theia-sticky-sidebar">Theia Sticky Sidebar </a></li>
+        <li><a href="https://modernizr.com/">Modernizr</a></li>
+        <li><a href="http://dimsemenov.com/plugins/magnific-popup/">Magnific popup</a></li>
+        <li><a href="https://github.com/andreruffert/rangeslider.js">Range slider</a></li>
+        <li><a href="http://isotope.metafizzy.co">Isotope</a></li>
+	  </ul>
+		<p>Images are not included.</p>
+        
+        <hr>
+        <h3 id="updates"><strong>E) Updates</strong> - <a href="#toc">top</a></h3>
+        <strong>v.1.1 16 November 2020</strong>
+        <ol>
+        <li>Added Login page</li>
+        <li>Added Modal Advertise/Newsletter with Cookie Session</li>
+        <li>Added Home page with Slider (Owl Carousel Based)</li>
+        <li>Added Detail page with Contact Form</li>
+        </ol>
+        <pre>HOW TO UPDATE FROM PREVIOUS VERSION
+
+1) Copy the new page login.html
+
+2) Takes as reference these new files: modal-advertiste.html, modal-newsletter.html, css/modal_popup.css, js/modal_popup.js
+
+3) Takes as reference index-6.html. New files: js/slider.js +img/slides folder. 
+Then update the following files: css/bootstrap_customized.css, css/bootstrap_customized.min.css, css/home.css
+
+4) Takes as reference new file detail-restaurant-4.html + assets/detail_contact.php. Update also this file assets/validate.js. </pre>
+        <strong>v.1.1 10 November 2020</strong>
+      <ol>
+        <li>Added Front-end Admin Section  template</li>
+      </ol>
+        <pre>HOW TO UPDATE FROM PREVIOUS VERSION
+
+1) Copy the folder admin_section</pre>
+
+      <hr>
+
+<h3>Maybe you are interested in</h3>
+<p><a href="https://1.envato.market/dA652"><img src="assets/images/01-foogra-restaurants-directory-listings-template.jpg" width="590" height="300"></a></p>
+
+<p><a href="https://1.envato.market/L1xAj"><img src="assets/images/01-quickfood-delivery-takeaway-food.jpg" width="590" height="300"></a></p>
+
+<p><a href="https://1.envato.market/DmbYj"><img src="assets/images/01-panagea-tours-hotels-restaurants-listing.jpg" width="590" height="300"></a></p>
+<p><a href="https://1.envato.market/xv2eA"><img src="assets/images/01-sparker-directory-listings-template.jpg" width="590" height="300"></a></p>
+<p><a href="https://1.envato.market/ryzjQ"><img src="assets/images/01-citytours-travel-tour-template.jpg" width="590" height="300"></a></p>
+<p><a href="https://1.envato.market/NJQ17"><img src="assets/images/01-travelguide-travel-site-template.jpg" width="590" height="300"></a></p>
+<p><a href="https://1.envato.market/EPzrP"><img src="assets/images/01-bestours-multipurpose-tours-template.jpg" width="590" height="300"></a></p>
+
+<p><a href="https://1.envato.market/QXNVP"><img src="assets/images/01-country-hotel-accommodation-b&b.jpg" width="590" height="300"></a></p>
+<p><a href="https://1.envato.market/YYqEJ"><img src="assets/images/01-albert-hotel-bed-and-breakfast.jpg" width="590" height="300"></a></p>
+<p><strong><br>
+    <img src="assets/images/avatar.jpg" width="80" height="80"><br>
+	  <br>
+    Once again, thank you so much for purchasing this theme. Please take a moment to rate it from your Downloads page.</strong><br> 
+		  
+<h3>Need support?</h3>
+For support contact me using the form on my profile page <span class="text_medium">with subject <strong>[ThemeForest Support]  Template name</strong></span>, or use the Support Tab on the item page. You will receive an answer within 24-48 hours (working days)  GMT  +1.
+<ul>
+<li>I only provide support for fixing bugs or small issues on my items.</li>
+<li>I don't provide free support for additional custom modifications to the items.</li>
+<li>Please provide your site link, screenshots and other information about your issue.</li>
+<li><a href="http://themeforest.net/page/item_support_policy" rel="nofollow"><strong>Envato support terms</strong></a></li>
+</ul>
+
+<h3>Need customization or availability for freelance projects?</h3>
+Just send an email via profile page form, we will check our availability; please don't forget to specify:
+<ul>
+<li>if you are a company, agency or private user</li>
+<li>all the information about your projects, needs, site urls, project sheet, etc..</li>
+<li>from which country you are</li>
+<li>if you have a deadline</li>
+<li>if you have basic knowledge of  HTML , CSS, JS,  PHP</li>
+</ul>
+<p class="append-bottom alt large"><strong>Ansonika</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
